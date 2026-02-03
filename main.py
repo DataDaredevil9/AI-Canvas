@@ -99,7 +99,7 @@ while True:
             cv2.putText(frame,"Drawing Mode",(20,30),cv2.FONT_HERSHEY_SIMPLEX,1,drawing_color,2)
         
         elif thumb_up and index_up and middle_up and ring_up and small_up:
-            canvas = np.zeros((480,640,3),np.uint8)
+            canvas = np.zeros_like(frame)
             prev_x, prev_y = 0, 0
             cv2.putText(frame,"Clear Canvas",(20,30),cv2.FONT_HERSHEY_SIMPLEX,1,(0,255,0),4)
             
@@ -140,3 +140,4 @@ while True:
 
 cam.release()
 cv2.destroyAllWindows()
+
